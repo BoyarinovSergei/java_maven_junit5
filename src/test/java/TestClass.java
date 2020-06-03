@@ -20,7 +20,7 @@ public class TestClass extends MainConf {
     }
 
     @Test
-    public void firstTest() throws InterruptedException {
+    public void firstTest() {
         driver.get("https://yandex.ru/");
         driver.findElement(By.xpath("//input[@aria-label=\"Запрос\"]")).sendKeys("Яндекс почта");
         driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
@@ -38,6 +38,6 @@ public class TestClass extends MainConf {
         driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
 
         String error = driver.findElement(By.xpath("//div[contains(text(),'Такого аккаунта нет')]")).getText();
-        Assertions.assertEquals(error,"Такого аккаунта нет");
+        Assertions.assertEquals("Такого аккаунта нет",error);
     }
 }
