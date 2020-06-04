@@ -39,6 +39,6 @@ public class TestClass extends MainConf {
 
         String error = driver.findElement(By.xpath("//div[@class=\"passp-form-field__error\"]")).getText();
 
-        Assertions.assertEquals("Такого аккаунта нет",error);
+        Assertions.assertEquals("Такого аккаунта нет", error);
     }
 }
