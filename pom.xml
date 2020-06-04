@@ -17,6 +17,13 @@
                     <target>8</target>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>2.9</version>
+            </plugin>
+
         </plugins>
     </build>
 
@@ -49,8 +56,5 @@
             <artifactId>junit-jupiter-engine</artifactId>
             <version>5.7.0-M1</version>
         </dependency>
-
-
     </dependencies>
-
 </project>

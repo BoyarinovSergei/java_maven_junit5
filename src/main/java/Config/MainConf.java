@@ -11,8 +11,8 @@ import java.util.concurrent.TimeUnit;
 
 public class MainConf {
     public static WebDriver driver;
-    public static WebDriverWait webDriverWait;
     public static JavascriptExecutor js;
+    public static WebDriverWait webDriverWait;
 
     public static void initialization(){
         WebDriverManager.chromedriver().setup();
@@ -20,7 +20,10 @@ public class MainConf {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(10,TimeUnit.SECONDS);
-        webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(30),Duration.ofMillis(100));
+        webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5));
         js = (JavascriptExecutor)driver;
     }
+
+
+
 }
